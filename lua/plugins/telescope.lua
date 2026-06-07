@@ -9,7 +9,17 @@ return {
       local telescope = require('telescope')
       local builtin = require('telescope.builtin')
 
-      telescope.setup({})
+      telescope.setup({
+        defaults = {
+          preview = {
+            -- Telescope's 0.1.x previewer calls the old nvim-treesitter
+            -- (`master`) API, which our `main`-branch treesitter no longer
+            -- exposes -> it crashes. Disable telescope's treesitter previewer;
+            -- previews fall back to Neovim's regex `:syntax` highlighting.
+            treesitter = false,
+          },
+        },
+      })
 
       -- keymaps
       vim.keymap.set('n', '<leader>ff', builtin.find_files,  { desc = 'Find files' })
