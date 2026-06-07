@@ -20,7 +20,6 @@ return {
           'ts_ls',        -- TypeScript / JavaScript
           'clangd',       -- C / C++
         },
-        automatic_installation = true,
       })
 
       -- This runs once for every buffer where an LSP attaches
