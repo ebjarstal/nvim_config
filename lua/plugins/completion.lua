@@ -35,9 +35,7 @@ return {
             debounce = 500, -- ms to wait after typing before showing completion
         },
         completion = {
-            autocomplete = {
-                require('cmp.types').cmp.TriggerEvent.TextChanged,
-            },
+            autocomplete = false, -- only trigger completion manually with <C-Space>
         },
         sources = cmp.config.sources({
           { name = 'nvim_lsp' },
