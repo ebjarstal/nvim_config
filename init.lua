@@ -1,5 +1,6 @@
 vim.opt.relativenumber = true
 vim.opt.number = true
+vim.opt.termguicolors = true  -- enable 24-bit truecolor (required by colorschemes)
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 
 vim.g.mapleader = ' '
